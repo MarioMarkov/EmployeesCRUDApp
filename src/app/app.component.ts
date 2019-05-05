@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './models/Employee';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Employees';
+  
+  public clickedEmployee: Employee;
+
+  childEventClicked(employee: Employee) {
+
+    this.clickedEmployee = employee;
+  }
+
 }

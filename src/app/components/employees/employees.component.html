@@ -1,0 +1,39 @@
+<div>
+    <label>Employee name:
+      <input #employeeName />
+    </label>
+    <label>Employee age:
+        <input #employeeAge />
+      </label>
+      <label>Employee gender:
+          <input #employeeGender />
+        </label>
+    <button (click)="add(employeeName.value,employeeAge.value,employeeGender.value); employeeName.value=''">
+      add
+    </button>
+  </div>
+
+<ul>
+  <li *ngFor='let employee of employees'>
+    
+    <div class="row">
+       <div class="column">
+          <div class="card">
+           <div class="container">
+              <h2>{{employee.name}}</h2>
+                <p class="title">CEO &amp; Founder</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+            <button class="edit" (click)='onSelect(employee)'>Edit</button>
+            <button class="remove" (click)='removeEmployee(employee)'>Remove</button>
+          </div>
+              
+        </div>
+      </div>
+
+  </li>
+</ul>
+<app-edit-employee [employee]='selectedEmployee' ></app-edit-employee>
+

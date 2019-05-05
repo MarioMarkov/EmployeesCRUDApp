@@ -1,0 +1,16 @@
+<div *ngIf='employee'>
+ <p>Edit Employee</p>
+  <div>
+    <label >Name:
+      <input [(ngModel)]="employee.name" placeholder="name"/>
+    </label>
+    <label >Age:
+      <input [(ngModel)]="employee.age" placeholder="age"/>
+    </label>
+    <label >Gender:
+      <input [(ngModel)]="employee.gender" placeholder="gender"/>
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+  
+</div>
