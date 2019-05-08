@@ -1,2 +1,15 @@
-<header>Employees</header>
-<app-employees ></app-employees>
+<header>
+    <nav>
+        <div class="container">
+            <a class="logo" routerLink='/employees'>
+                <img  src="https://kantorbitcoin.pl/wp-content/uploads/2018/07/monero-symbol-1280.png" alt="">
+            </a>
+            <div class="title">Employees Control</div>
+            <div class="add">
+                    <a  routerLink='/add'> + Add New Employee</a>
+            </div>
+            
+        </div>
+    </nav>
+</header>
+<router-outlet></router-outlet>

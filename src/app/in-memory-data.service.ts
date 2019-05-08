@@ -7,10 +7,10 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService  {
   createDb() {
     const employees = [
-      { id:1,name:'John',age:24,gender:'male' },
-      { id:1,name:'Jo',age:26,gender:'male' },
-      { id:1,name:'Henry',age:28,gender:'male' },
-      { id:1,name:'Mary',age:44,gender:'female' },
+      { id:1,name:'John Adams',age:24,gender:'male' },
+      { id:2,name:'Olivia Stewart',age:26,gender:'female' },
+      { id:3,name:'Henry Glover',age:28,gender:'male' },
+      
 
     ];
     return {employees};

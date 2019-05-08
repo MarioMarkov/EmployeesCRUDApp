@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
+import { AddEmployeeComponent } from '../app/components/add-employee/add-employee.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     EditEmployeeComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,

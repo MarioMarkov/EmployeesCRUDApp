@@ -1,16 +1,23 @@
-<div *ngIf='employee'>
- <p>Edit Employee</p>
-  <div>
-    <label >Name:
-      <input [(ngModel)]="employee.name" placeholder="name"/>
-    </label>
-    <label >Age:
-      <input [(ngModel)]="employee.age" placeholder="age"/>
-    </label>
-    <label >Gender:
-      <input [(ngModel)]="employee.gender" placeholder="gender"/>
-    </label>
-  </div>
-  <button (click)="save()">save</button>
+<div *ngIf='employee' class="container" >
   
-</div>
+    <div action="/employees" class="form-container">
+      <h1>Edit Employee</h1>
+  
+      <label >Name:</label>
+          <input type="text" [(ngModel)]="employee.name" />
+        
+  
+        <label >Age:</label>
+            <input type="text" [(ngModel)]="employee.age"  />
+          
+  
+          <label class="gender">Gender:
+              <select [(ngModel)]="employee.gender" placeholder="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+            <button (click)="save()">save</button>
+     
+          </div>
+  </div>

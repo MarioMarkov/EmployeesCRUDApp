@@ -1,39 +1,28 @@
-<div>
-    <label>Employee name:
-      <input #employeeName />
-    </label>
-    <label>Employee age:
-        <input #employeeAge />
-      </label>
-      <label>Employee gender:
-          <input #employeeGender />
-        </label>
-    <button (click)="add(employeeName.value,employeeAge.value,employeeGender.value); employeeName.value=''">
-      add
-    </button>
-  </div>
+
 
 <ul>
   <li *ngFor='let employee of employees'>
-    
-    <div class="row">
-       <div class="column">
-          <div class="card">
-           <div class="container">
-              <h2>{{employee.name}}</h2>
-                <p class="title">CEO &amp; Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>example@example.com</p>
-                <p><button class="button">Contact</button></p>
-            </div>
-            <button class="edit" (click)='onSelect(employee)'>Edit</button>
-            <button class="remove" (click)='removeEmployee(employee)'>Remove</button>
-          </div>
-              
-        </div>
+    <div class="container">
+      <div *ngIf="employee.gender==='male'">
+          <img src="https://www.shareicon.net/data/128x128/2015/10/05/651222_man_512x512.png">
       </div>
+      <div *ngIf="employee.gender==='female'">
+          <img src="https://www.shareicon.net/data/128x128/2015/10/05/651441_users_512x512.png">
+      </div>
+      <div class="employee-info">
+          <h2>{{employee.name}}</h2>
+          <p>Age: {{employee.age}}</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <button class="contact">Contact</button>
+          <button class="edit" routerLink='/edit/{{ employee.id }}' (click)='onSelect(employee)'>Edit</button>
+          <button class="remove" (click)='removeEmployee(employee)'>Remove</button>
+      </div>
+      
+    </div>
+  
 
   </li>
 </ul>
-<app-edit-employee [employee]='selectedEmployee' ></app-edit-employee>
+
 

@@ -35,14 +35,5 @@ export class EmployeesComponent implements OnInit {
     this.selectedEmployee = employee;
     
   }
-  add(name: string,age:number,gender:string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.employeeService.addEmployee({ name,age,gender } as Employee)
-      .subscribe(employee => {
-        this.employees.push(employee);
-     console.log(employee)
-
-      });
-  }
+  
 }
